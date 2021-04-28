@@ -1,4 +1,4 @@
-package com.bc.initialize.account;
+package com.bc.initialize;
 
 import com.bc.build.entities.BillingAccount;
 import com.bc.build.entities.Product;

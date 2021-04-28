@@ -1,8 +1,8 @@
-package com.bc.account.build.revolvingcredit.account;
+package com.bc.build.builders.revolvingcredit.account;
 
-import com.bc.account.build.BillingAccountBuilder;
-import com.bc.account.build.entities.BillingAccount;
-import com.bc.account.build.entities.Product;
+import com.bc.build.builders.BillingAccountBuilder;
+import com.bc.build.entities.BillingAccount;
+import com.bc.build.entities.Product;
 
 public class RevolvingCreditBillingAccountBuilder  implements BillingAccountBuilder {
 

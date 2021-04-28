@@ -1,10 +1,10 @@
 package com.bc.test;
 
-import com.bc.account.build.*;
-import com.bc.account.build.entities.BillingAccount;
-import com.bc.account.build.entities.Product;
-import com.bc.account.build.factory.BillingAccountBuilderFactory;
-import com.bc.account.build.factory.revolvingcredit.RevolvingCreditBillingAccountBuilderFactory;
+import com.bc.build.builders.*;
+import com.bc.build.entities.BillingAccount;
+import com.bc.build.entities.Product;
+import com.bc.build.factory.BillingAccountBuilderFactory;
+import com.bc.build.factory.revolvingcredit.RevolvingCreditBillingAccountBuilderFactory;
 
 import java.util.List;
 

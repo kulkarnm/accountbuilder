@@ -1,7 +1,6 @@
-package com.bc.account.build;
+package com.bc.build.builders;
 
-import com.bc.account.build.entities.BillingAccountFee;
-import com.bc.account.build.entities.Product;
+import com.bc.build.entities.Product;
 
 import java.util.List;
 

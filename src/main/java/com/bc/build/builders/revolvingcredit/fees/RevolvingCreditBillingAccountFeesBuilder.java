@@ -1,12 +1,8 @@
-package com.bc.account.build.revolvingcredit.fees;
+package com.bc.build.builders.revolvingcredit.fees;
 
-import com.bc.account.build.BillingAccountFeeBuilder;
-import com.bc.account.build.BillingAccountFeesBuilder;
-import com.bc.account.build.BillingAccountPlanBuilder;
-import com.bc.account.build.entities.BillingAccountFee;
-import com.bc.account.build.entities.Product;
-import com.bc.account.build.revolvingcredit.plans.CashPlanBuilder;
-import com.bc.account.build.revolvingcredit.plans.RetailPlanBuilder;
+import com.bc.build.builders.BillingAccountFeeBuilder;
+import com.bc.build.builders.BillingAccountFeesBuilder;
+import com.bc.build.entities.Product;
 
 import java.util.ArrayList;
 import java.util.List;

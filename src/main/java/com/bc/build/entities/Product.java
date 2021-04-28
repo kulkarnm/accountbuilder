@@ -1,4 +1,4 @@
-package com.bc.account.build.entities;
+package com.bc.build.entities;
 
 public class Product {
 

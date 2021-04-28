@@ -1,8 +1,8 @@
-package com.bc.account.build.factory;
+package com.bc.build.factory;
 
-import com.bc.account.build.BillingAccountBuilder;
-import com.bc.account.build.BillingAccountFeesBuilder;
-import com.bc.account.build.BillingAccountPlansBuilder;
+import com.bc.build.builders.BillingAccountBuilder;
+import com.bc.build.builders.BillingAccountFeesBuilder;
+import com.bc.build.builders.BillingAccountPlansBuilder;
 
 public interface BillingAccountBuilderFactory {
     public BillingAccountBuilder buildAccountBuilder();

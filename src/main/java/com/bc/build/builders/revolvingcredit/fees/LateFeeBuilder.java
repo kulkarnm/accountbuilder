@@ -1,8 +1,8 @@
-package com.bc.account.build.revolvingcredit.fees;
+package com.bc.build.builders.revolvingcredit.fees;
 
-import com.bc.account.build.BillingAccountFeeBuilder;
-import com.bc.account.build.entities.BillingAccountFee;
-import com.bc.account.build.entities.Product;
+import com.bc.build.builders.BillingAccountFeeBuilder;
+import com.bc.build.entities.BillingAccountFee;
+import com.bc.build.entities.Product;
 
 public class LateFeeBuilder implements BillingAccountFeeBuilder {
 

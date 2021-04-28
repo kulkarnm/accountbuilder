@@ -15,6 +15,7 @@ public class RevolvingCreditBillingAccountPlansBuilder implements BillingAccount
         // based on product(classes associated with product) choose appropriate plan builders to be added
         //currently it is hardcoded to casha plan builder and retail plan builder
         List<BillingAccountPlanBuilder> planBuilders = new ArrayList<>();
+
         planBuilders.add(new CashPlanBuilder());
         planBuilders.add(new RetailPlanBuilder());
         return planBuilders;

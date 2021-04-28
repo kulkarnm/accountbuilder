@@ -1,16 +1,14 @@
-package com.bc.initialize.plans.revolvingcredit;
+package com.bc.initialize.params.plans.revolvingcredit;
 
 import com.bc.build.entities.BillingAccount;
 import com.bc.build.entities.Product;
 import com.bc.initialize.BillingCycleInitializer;
-import com.bc.initialize.fees.AbstractBillingAccountFeeParametersInitializer;
-import com.bc.initialize.fees.BillingAccountFeeParametersInitializer;
-import com.bc.initialize.plans.AbstractBillingAccountPlanParametersInitializer;
-import com.bc.initialize.plans.BillingAccountPlanParametersInitializer;
+import com.bc.initialize.params.fees.AbstractBillingAccountFeeParametersInitializer;
+import com.bc.initialize.params.fees.BillingAccountFeeParametersInitializer;
 
-public class RevolvingCreditBillingAccountFeeInitializer extends AbstractBillingAccountFeeParametersInitializer {
+public class RevolvingCreditBillingAccountPlanInitializer extends AbstractBillingAccountFeeParametersInitializer {
     private BillingCycleInitializer nextInitializer;
-    public RevolvingCreditBillingAccountFeeInitializer(BillingCycleInitializer nextInitializer){
+    public RevolvingCreditBillingAccountPlanInitializer(BillingCycleInitializer nextInitializer){
         this.nextInitializer=nextInitializer;
     }
     @Override

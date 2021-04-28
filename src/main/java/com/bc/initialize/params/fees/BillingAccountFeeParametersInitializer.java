@@ -1,4 +1,4 @@
-package com.bc.initialize.fees;
+package com.bc.initialize.params.fees;
 
 import com.bc.build.entities.BillingAccount;
 import com.bc.build.entities.Product;

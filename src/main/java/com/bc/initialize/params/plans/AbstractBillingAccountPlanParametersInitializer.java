@@ -1,8 +1,7 @@
-package com.bc.initialize.plans;
+package com.bc.initialize.params.plans;
 
 import com.bc.build.entities.BillingAccount;
 import com.bc.build.entities.Product;
-import com.bc.initialize.account.AccountParametersInitializer;
 
 public abstract class AbstractBillingAccountPlanParametersInitializer implements BillingAccountPlanParametersInitializer {
 

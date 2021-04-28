@@ -1,9 +1,9 @@
-package com.bc.initialize.account;
+package com.bc.initialize.params.fees;
 
 import com.bc.build.entities.BillingAccount;
 import com.bc.build.entities.Product;
 
-public abstract class AbstractBillingAccountParametersInitializer implements AccountParametersInitializer {
+public abstract class AbstractBillingAccountFeeParametersInitializer implements BillingAccountFeeParametersInitializer {
 
     @Override
     public BillingAccount initialize(Product product, BillingAccount billingAccount) {

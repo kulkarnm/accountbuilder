@@ -4,7 +4,9 @@ import com.bc.build.entities.BillingAccount;
 import com.bc.build.entities.Product;
 import com.bc.initialize.BillingCycleInitializer;
 import com.bc.initialize.params.account.revolvingcredit.RevolvingCreditBillingAccountParameterstInitializer;
-import com.bc.initialize.params.plans.revolvingcredit.RevolvingCreditBillingAccountPlanInitializer;
+import com.bc.initialize.params.plans.revolvingcredit.RevolvingCreditCashPlanParametersInitializer;
+import com.bc.initialize.params.plans.revolvingcredit.RevolvingCreditPunitivePlanParametersInitializer;
+import com.bc.initialize.params.plans.revolvingcredit.RevolvingCreditRetailPlanParametersInitializer;
 
 public class CompleteBillingCycleInitializer {
     private BillingCycleInitializer firstParametersInitializer;
@@ -12,8 +14,9 @@ public class CompleteBillingCycleInitializer {
 
     public CompleteBillingCycleInitializer(){
         firstParametersInitializer =new RevolvingCreditBillingAccountParameterstInitializer(
-                new RevolvingCreditBillingAccountPlanInitializer(
-                        new RevolvingCreditBillingAccountPlanInitializer(null)));
+                new RevolvingCreditCashPlanParametersInitializer(
+                        new RevolvingCreditRetailPlanParametersInitializer(
+                                new RevolvingCreditPunitivePlanParametersInitializer(null))));
 
     }
     public BillingAccount initialize(Product product, BillingAccount billingAccount){

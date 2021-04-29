@@ -1,4 +1,4 @@
-package com.bc.initialize.params.fees.revolvingcredit;
+package com.bc.initialize.params.plans.revolvingcredit;
 
 import com.bc.build.entities.BillingAccount;
 import com.bc.build.entities.Product;
@@ -6,9 +6,9 @@ import com.bc.initialize.BillingCycleInitializer;
 import com.bc.initialize.params.plans.AbstractBillingAccountPlanParametersInitializer;
 import com.bc.initialize.params.plans.BillingAccountPlanParametersInitializer;
 
-public class RevolvingCreditBillingAccountPlanInitializer extends AbstractBillingAccountPlanParametersInitializer {
+public class RevolvingCreditPunitivePlanParametersInitializer extends AbstractBillingAccountPlanParametersInitializer {
     private BillingCycleInitializer nextInitializer;
-    public RevolvingCreditBillingAccountPlanInitializer(BillingCycleInitializer nextInitializer){
+    public RevolvingCreditPunitivePlanParametersInitializer(BillingCycleInitializer nextInitializer){
         this.nextInitializer=nextInitializer;
     }
     @Override
@@ -17,7 +17,7 @@ public class RevolvingCreditBillingAccountPlanInitializer extends AbstractBillin
     }
 
     @Override
-    public BillingAccountPlanParametersInitializer initializeCustomerPreferencesAndUnits(Product product, BillingAccount billingAccount) {
+    public BillingAccountPlanParametersInitializer initializeInterestRate(Product product, BillingAccount billingAccount) {
         return null;
     }
 
@@ -25,6 +25,12 @@ public class RevolvingCreditBillingAccountPlanInitializer extends AbstractBillin
     public BillingAccountPlanParametersInitializer initializeRuleParameters(Product product, BillingAccount billingAccount) {
         return null;
     }
+
+    @Override
+    public BillingAccountPlanParametersInitializer initializeTransactionFee(Product product, BillingAccount billingAccount) {
+        return null;
+    }
+
     @Override
     public BillingAccount initialize(Product product, BillingAccount billingAccount) {
         super.initialize(product,billingAccount);

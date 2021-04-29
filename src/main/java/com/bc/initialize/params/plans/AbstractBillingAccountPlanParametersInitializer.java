@@ -8,7 +8,8 @@ public abstract class AbstractBillingAccountPlanParametersInitializer implements
     @Override
     public BillingAccount initialize(Product product, BillingAccount billingAccount) {
         this.initializeIdentityDefinition(product, billingAccount).
-                initializeCustomerPreferencesAndUnits(product, billingAccount).
+                initializeInterestRate(product, billingAccount).
+                initializeTransactionFee(product, billingAccount).
                 initializeRuleParameters(product, billingAccount);
         return billingAccount;
     }

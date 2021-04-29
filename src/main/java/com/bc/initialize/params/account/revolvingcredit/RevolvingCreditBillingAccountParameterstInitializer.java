@@ -4,7 +4,7 @@ import com.bc.build.entities.BillingAccount;
 import com.bc.build.entities.Product;
 import com.bc.initialize.BillingCycleInitializer;
 import com.bc.initialize.params.account.AbstractBillingAccountParametersInitializer;
-import com.bc.initialize.params.account.AccountParametersInitializer;
+import com.bc.initialize.params.account.BillingAccountParametersInitializer;
 
 public class RevolvingCreditBillingAccountParameterstInitializer extends AbstractBillingAccountParametersInitializer {
     private BillingCycleInitializer nextInitializer;
@@ -12,17 +12,17 @@ public class RevolvingCreditBillingAccountParameterstInitializer extends Abstrac
         this.nextInitializer=nextInitializer;
     }
     @Override
-    public AccountParametersInitializer initializeIdentityDefinition(Product product, BillingAccount billingAccount) {
+    public BillingAccountParametersInitializer initializeIdentityDefinition(Product product, BillingAccount billingAccount) {
         return null;
     }
 
     @Override
-    public AccountParametersInitializer initializeCustomerPreferencesAndLimits(Product product, BillingAccount billingAccount) {
+    public BillingAccountParametersInitializer initializeCustomerPreferencesAndLimits(Product product, BillingAccount billingAccount) {
         return null;
     }
 
     @Override
-    public AccountParametersInitializer initializeRuleParameters(Product product, BillingAccount billingAccount) {
+    public BillingAccountParametersInitializer initializeRuleParameters(Product product, BillingAccount billingAccount) {
         return null;
     }
     @Override

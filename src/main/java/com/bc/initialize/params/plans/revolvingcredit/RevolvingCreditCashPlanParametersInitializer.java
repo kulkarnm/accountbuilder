@@ -12,32 +12,33 @@ public class RevolvingCreditCashPlanParametersInitializer extends AbstractBillin
         this.nextInitializer=nextInitializer;
     }
     @Override
-    public BillingAccountPlanParametersInitializer initializeIdentityDefinition(Product product, BillingAccount billingAccount) {
+    public BillingAccountPlanParametersInitializer initializeIdentityDefinition(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
 
         return null;
     }
 
     @Override
-    public BillingAccountPlanParametersInitializer initializeInterestRate(Product product, BillingAccount billingAccount) {
+    public BillingAccountPlanParametersInitializer initializeInterestRate(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
         return null;
     }
 
     @Override
-    public BillingAccountPlanParametersInitializer initializeRuleParameters(Product product, BillingAccount billingAccount) {
+    public BillingAccountPlanParametersInitializer initializeRuleParameters(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
         return null;
     }
 
     @Override
-    public BillingAccountPlanParametersInitializer initializeTransactionFee(Product product, BillingAccount billingAccount) {
+    public BillingAccountPlanParametersInitializer initializeTransactionFee(Product product, BillingAccount oldBillingAccount, BillingAccount newBIllingAccount) {
         return null;
     }
 
     @Override
-    public BillingAccount initialize(Product product, BillingAccount billingAccount) {
-        super.initialize(product,billingAccount);
+    public BillingAccount initialize(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
+        super.initialize(product, oldBillingAccount, newBillingAccount);
+        System.out.println("IN RevolvingCreditCashPlanParametersInitializer");
         if(null!=nextInitializer){
-            return nextInitializer.initialize(product,billingAccount);
+            return nextInitializer.initialize(product, oldBillingAccount, newBillingAccount);
         }
-        return billingAccount;
+        return oldBillingAccount;
     }
 }

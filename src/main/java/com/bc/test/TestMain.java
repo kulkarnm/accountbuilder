@@ -1,5 +1,6 @@
 package com.bc.test;
 
+import com.bc.CompleteBillingCycleInitializer;
 import com.bc.build.builders.*;
 import com.bc.build.entities.BillingAccount;
 import com.bc.build.entities.Product;
@@ -34,7 +35,10 @@ public class TestMain {
                     addBuckets(product).buildBillingAccountFee());
         }*/
 
-        System.out.println(billingAccount);
+        BillingAccount newAccount = new BillingAccount();
+        CompleteBillingCycleInitializer initializer = new CompleteBillingCycleInitializer();
+        initializer.initialize(product,billingAccount,newAccount );
+        System.out.println(newAccount);
 
     }
 }

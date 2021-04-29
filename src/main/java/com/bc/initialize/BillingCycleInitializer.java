@@ -4,6 +4,6 @@ import com.bc.build.entities.BillingAccount;
 import com.bc.build.entities.Product;
 
 public interface BillingCycleInitializer {
-    public BillingAccount initialize(Product product, BillingAccount billingAccount);
+    public BillingAccount initialize(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount);
 
 }

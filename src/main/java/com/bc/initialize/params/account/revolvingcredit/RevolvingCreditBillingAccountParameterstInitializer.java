@@ -12,25 +12,26 @@ public class RevolvingCreditBillingAccountParameterstInitializer extends Abstrac
         this.nextInitializer=nextInitializer;
     }
     @Override
-    public BillingAccountParametersInitializer initializeIdentityDefinition(Product product, BillingAccount billingAccount) {
+    public BillingAccountParametersInitializer initializeIdentityDefinition(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
         return null;
     }
 
     @Override
-    public BillingAccountParametersInitializer initializeCustomerPreferencesAndLimits(Product product, BillingAccount billingAccount) {
+    public BillingAccountParametersInitializer initializeCustomerPreferencesAndLimits(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
         return null;
     }
 
     @Override
-    public BillingAccountParametersInitializer initializeRuleParameters(Product product, BillingAccount billingAccount) {
+    public BillingAccountParametersInitializer initializeRuleParameters(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
         return null;
     }
     @Override
-    public BillingAccount initialize(Product product, BillingAccount billingAccount) {
-        super.initialize(product,billingAccount);
+    public BillingAccount initialize(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
+        super.initialize(product, oldBillingAccount, newBillingAccount);
+        System.out.println("IN RevolvingCreditBillingAccountParameterstInitializer");
         if(null!=nextInitializer){
-            return nextInitializer.initialize(product,billingAccount);
+            return nextInitializer.initialize(product, oldBillingAccount,newBillingAccount );
         }
-        return billingAccount;
+        return newBillingAccount;
     }
 }

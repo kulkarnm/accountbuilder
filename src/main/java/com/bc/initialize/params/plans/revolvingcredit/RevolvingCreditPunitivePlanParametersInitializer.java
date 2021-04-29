@@ -13,22 +13,22 @@ public class RevolvingCreditPunitivePlanParametersInitializer extends AbstractBi
     }
     @Override
     public BillingAccountPlanParametersInitializer initializeIdentityDefinition(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
-        return null;
+        return this;
     }
 
     @Override
     public BillingAccountPlanParametersInitializer initializeInterestRate(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
-        return null;
+        return this;
     }
 
     @Override
     public BillingAccountPlanParametersInitializer initializeRuleParameters(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
-        return null;
+        return this;
     }
 
     @Override
     public BillingAccountPlanParametersInitializer initializeTransactionFee(Product product, BillingAccount oldBillingAccount, BillingAccount newBIllingAccount) {
-        return null;
+        return this;
     }
 
     @Override

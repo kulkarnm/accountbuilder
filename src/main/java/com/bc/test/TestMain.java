@@ -11,7 +11,7 @@ import java.util.List;
 
 public class TestMain {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
 
         BillingAccountBuilderFactory factory = new RevolvingCreditBillingAccountBuilderFactory();
 
@@ -20,24 +20,18 @@ public class TestMain {
         BillingAccountFeesBuilder feesBuilder = factory.buildAccountFeesBuilder();
 
         Product product = new Product();
-        BillingAccount billingAccount = accountBuilder.buildBillingAccount();
+        BillingAccount oldBillingAccount = accountBuilder.buildBillingAccount();
 
         List<BillingAccountPlanBuilder> planBuilders = plansBuilder.buildBillingAccountPlanBuilders(product);
         for (BillingAccountPlanBuilder planBuilder : planBuilders) {
-            billingAccount.addTtoPlan(planBuilder.
+            oldBillingAccount.addTtoPlan(planBuilder.
                     addParameters(product).
                     addBuckets(product).buildBillingAccountPlan());
         }
-/*        List<BillingAccountFeeBuilder> feeBuilders = feesBuilder.buildBillingAccountFeeBuilders(product);
-        for(BillingAccountFeeBuilder feeBuilder: feeBuilders){
-            billingAccount.addToAccountFees(feeBuilder.
-                    addParameters(product).
-                    addBuckets(product).buildBillingAccountFee());
-        }*/
 
-        BillingAccount newAccount = new BillingAccount();
+        BillingAccount newAccount = (BillingAccount) oldBillingAccount.clone();
         CompleteBillingCycleInitializer initializer = new CompleteBillingCycleInitializer();
-        initializer.initialize(product,billingAccount,newAccount );
+        newAccount = initializer.initialize(product,oldBillingAccount,newAccount );
         System.out.println(newAccount);
 
     }

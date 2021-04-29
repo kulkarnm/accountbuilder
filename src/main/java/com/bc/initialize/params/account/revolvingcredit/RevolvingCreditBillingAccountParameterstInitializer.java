@@ -13,17 +13,17 @@ public class RevolvingCreditBillingAccountParameterstInitializer extends Abstrac
     }
     @Override
     public BillingAccountParametersInitializer initializeIdentityDefinition(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
-        return null;
+        return this;
     }
 
     @Override
     public BillingAccountParametersInitializer initializeCustomerPreferencesAndLimits(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
-        return null;
+        return this;
     }
 
     @Override
     public BillingAccountParametersInitializer initializeRuleParameters(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
-        return null;
+        return this;
     }
     @Override
     public BillingAccount initialize(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {

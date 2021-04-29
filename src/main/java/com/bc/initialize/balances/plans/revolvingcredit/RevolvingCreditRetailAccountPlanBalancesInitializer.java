@@ -14,12 +14,12 @@ public class RevolvingCreditRetailAccountPlanBalancesInitializer extends Abstrac
     }
     @Override
     public BillingAccountPlanBalancesInitializer initializePriorCycleBalances(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
-        return null;
+        return this;
     }
 
     @Override
     public BillingAccountPlanBalancesInitializer initializeCurrentCycleBalances(Product product, BillingAccount oldBillingAccount, BillingAccount newBillingAccount) {
-        return null;
+        return this;
     }
 
     @Override
